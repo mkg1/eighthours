@@ -13,9 +13,12 @@ class Profile(models.Model):
     email = models.CharField(max_length=100)
 
 class Exercise(models.Model):
+    description = models.CharField(max_length=100)
     exercise_type = models.ManyToManyField('ExerciseType', blank=True)
     reps = models.IntegerField()
 
+class ExerciseType(models.Model):
+    description = models.CharField(max_length=50)
+
 class Workout(models.Model):
     work_day = models.OneToOneField('WorkDay')
-        
