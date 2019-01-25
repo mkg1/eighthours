@@ -7,6 +7,7 @@ class WorkDay(models.Model):
     target_intervals = models.IntegerField()
     location = models.CharField(max_length=100)
     description = models.TextField()
+    exercise = models.OneToManyField('Exercise')
 
 class Profile(models.Model):
     name = models.CharField(max_length=100)
