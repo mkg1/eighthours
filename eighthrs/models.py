@@ -9,14 +9,14 @@ from django.db import models
 #     description = models.TextField()
 #     exercise = models.OneToManyField('Exercise')
 #
-class Profile(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
+# class Profile(models.Model):
+#     name = models.CharField(max_length=100)
+#     email = models.CharField(max_length=100)
     # work_day = models.OneToManyFields('WorkDay')
-# class Exercise(models.Model):
-#     description = models.CharField(max_length=100)
-#     exercise_type = models.ManyToManyField('ExerciseType', blank=True)
-#     reps = models.IntegerField()
+class Exercise(models.Model):
+    description = models.CharField(max_length=100)
+    # exercise_type = models.ManyToManyField('ExerciseType', blank=True)
+    reps = models.IntegerField()
 #
 # class ExerciseType(models.Model):
 #     description = models.CharField(max_length=50)
