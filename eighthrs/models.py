@@ -12,7 +12,7 @@ from django.db import models
 class Profile(models.Model):
     name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
-    work_day = models.OneToManyFields('WorkDay')
+    # work_day = models.OneToManyFields('WorkDay')
 # class Exercise(models.Model):
 #     description = models.CharField(max_length=100)
 #     exercise_type = models.ManyToManyField('ExerciseType', blank=True)
